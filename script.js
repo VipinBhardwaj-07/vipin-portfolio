@@ -1,3 +1,4 @@
+// Typing Animation
 const text = ["Aspiring Developer", "DSA Learner", "AI & ML Enthusiast"];
 let i = 0;
 let j = 0;
@@ -20,5 +21,17 @@ function type() {
         setTimeout(type, 1000);
     }
 }
-
 type();
+
+// Scroll Animation
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sec.style.opacity = 1;
+            sec.style.transform = "translateY(0)";
+        }
+    });
+});
