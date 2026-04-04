@@ -1,15 +1,18 @@
 body {
-    font-family: Arial;
     margin: 0;
+    font-family: Arial;
     background: #0f172a;
     color: white;
 }
 
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
-    background: #1e293b;
+    padding: 15px 50px;
+    background: #020617;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
@@ -18,7 +21,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav a {
@@ -26,18 +29,41 @@ nav a {
     text-decoration: none;
 }
 
+/* HERO */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+#home h1 {
+    font-size: 40px;
+}
+
+#typing {
+    color: #38bdf8;
+    margin-top: 10px;
+}
+
+/* SECTIONS */
 section {
-    padding: 50px;
+    padding: 60px;
     text-align: center;
 }
 
+/* CARDS */
 .card {
     background: #1e293b;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
+    width: 300px;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
-a {
-    color: #38bdf8;
+.card:hover {
+    transform: scale(1.05);
 }
