@@ -1,3 +1,4 @@
+// Typing Animation
 const text = ["Aspiring Developer", "DSA Learner", "AI & ML Enthusiast"];
 let i = 0;
 let j = 0;
