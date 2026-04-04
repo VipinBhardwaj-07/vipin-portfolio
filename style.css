@@ -1,18 +1,15 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background: #0f172a;
     color: white;
 }
 
-/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
@@ -20,7 +17,6 @@ nav {
     background: #020617;
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
 nav h2 {
@@ -39,14 +35,12 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
-    transition: 0.3s;
 }
 
 nav a:hover {
     color: #38bdf8;
 }
 
-/* HERO SECTION */
 #home {
     height: 100vh;
     display: flex;
@@ -54,74 +48,51 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #0f172a, #1e293b);
-    text-align: center;
-}
-
-#home h1 {
-    font-size: 45px;
 }
 
 #typing {
-    margin-top: 10px;
-    font-size: 22px;
     color: #38bdf8;
+    margin-top: 10px;
 }
 
-/* SECTIONS */
 section {
-    padding: 60px 20px;
+    padding: 60px;
     text-align: center;
+    animation: fadeIn 1s ease-in;
 }
 
-/* CARDS */
 .card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
     padding: 20px;
     margin: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 250px;
-    transition: 0.3s;
+    display: inline-block;
 }
 
 .card:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
     box-shadow: 0 0 20px #38bdf8;
 }
 
-/* PROJECTS */
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* SKILLS */
-#skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* CERTIFICATES */
 .cert-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
 }
 
-.cert-container a {
-    color: #38bdf8;
-    text-decoration: none;
+input, textarea {
+    width: 250px;
+    padding: 10px;
 }
 
-/* CONTACT */
-#contact p {
-    font-size: 18px;
+button {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
 }
 
-/* SCROLL SMOOTH */
-html {
-    scroll-behavior: smooth;
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
