@@ -1,118 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vipin Portfolio</title>
+<meta charset="UTF-8">
+<title>Vipin | Portfolio</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
 
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
-<script>
-VANTA.NET({
-  el: "#hero",
-  color: 0x00ffff,
-  backgroundColor: 0x0f172a
-})
-</script>
+<!-- NAVBAR -->
+<nav>
+  <h2>Vipin</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<!-- 🔥 HERO SECTION -->
-<section id="hero">
-  <h1>Hi, I'm <span class="gradient">Vipin Bhardwaj</span></h1>
-  <h2 id="typing"></h2>
-</section>
-
-<!-- 👨‍💻 ABOUT -->
-<section class="section" data-aos="fade-up">
-  <h2>About Me</h2>
-  <p>
-    I am a passionate Web Developer and AI Enthusiast.
-    I love building creative websites and solving problems using code.
-  </p>
-
-  <div class="stats">
-    <div>🚀 10+ Projects</div>
-    <div>💡 AI Projects</div>
-    <div>🏆 Fast Learner</div>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Hi, I'm <span>Vipin</span></h1>
+    <h2 id="typing"></h2>
+    <button>Hire Me</button>
   </div>
 </section>
 
-<!-- 💼 PROJECTS -->
-<section class="section" data-aos="fade-up">
+<!-- ABOUT -->
+<section id="about" class="glass">
+  <h2>About Me</h2>
+  <p>I build modern websites and AI projects.</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
 
-  <div class="cards">
-
-    <div class="card">
-      <h3>CNN Image Classifier</h3>
-      <p>Deep learning model using Python & TensorFlow</p>
-      <button>Live</button>
-      <button>Code</button>
-    </div>
-
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Modern animated portfolio using HTML CSS JS</p>
-      <button>Live</button>
-      <button>Code</button>
-    </div>
-
+  <div class="grid">
+    <div class="card">CNN Project</div>
+    <div class="card">Portfolio</div>
+    <div class="card">More Coming...</div>
   </div>
 </section>
 
-<!-- 📜 CERTIFICATES -->
-<section class="section" data-aos="fade-up">
-  <h2>Certificates</h2>
-
-  <div class="cards">
-    <div class="card">Certificate 1</div>
-    <div class="card">Certificate 2</div>
-  </div>
-</section>
-
-<!-- 📊 SKILLS -->
-<section class="section" data-aos="fade-up">
-  <h2>Skills</h2>
-
-  <div class="skills">
-    <div>HTML <span>90%</span></div>
-    <div>CSS <span>85%</span></div>
-    <div>Java <span>75%</span></div>
-    <div>Python <span>80%</span></div>
-  </div>
-</section>
-
-<!-- 📩 CONTACT -->
-<section class="section" data-aos="fade-up">
+<!-- CONTACT -->
+<section id="contact" class="glass">
   <h2>Contact</h2>
-
-  <form>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <input placeholder="Email">
+  <button>Send</button>
 </section>
 
-<!-- JS -->
 <script src="script.js"></script>
-
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
 </body>
 </html>
