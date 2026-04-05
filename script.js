@@ -1,37 +1,14 @@
-// Typing Animation
-const text = ["Aspiring Developer", "DSA Learner", "AI & ML Enthusiast"];
-let i = 0;
-let j = 0;
-let currentText = "";
-let isDeleting = false;
-
-function type() {
-    currentText = text[i];
-    document.getElementById("typing").textContent = currentText.substring(0, j);
-
-    if (!isDeleting && j < currentText.length) {
-        j++;
-        setTimeout(type, 100);
-    } else if (isDeleting && j > 0) {
-        j--;
-        setTimeout(type, 50);
-    } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % text.length;
-        setTimeout(type, 1000);
-    }
-}
-type();
-
-// Scroll Animation
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            sec.style.opacity = 1;
-            sec.style.transform = "translateY(0)";
-        }
-    });
+// Typing animation
+new Typed("#typing", {
+  strings: ["Web Developer 💻", "AI Enthusiast 🤖", "Problem Solver 🔥"],
+  typeSpeed: 50,
+  backSpeed: 30,
+  loop: true
 });
+
+// GitHub API (Dynamic Projects)
+fetch("https://api.github.com/users/VipinBhardwaj-07/repos")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+  });
