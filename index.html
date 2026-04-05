@@ -2,58 +2,246 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vipin | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vipin Bhardwaj Portfolio</title>
 
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  transition: 0.5s;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* CURSOR GLOW */
+.cursor {
+  width: 20px;
+  height: 20px;
+  background: #00f7ff;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: #38bdf8;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #38bdf8;
+  color: black;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* SECTION */
+section {
+  padding: 60px 80px;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(10deg) scale(1.05);
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* TEXT BIG */
+.big {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<div class="cursor"></div>
+
+<!-- NAV -->
 <nav>
-  <h2>Vipin</h2>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div>Vipin 🚀</div>
+  <button onclick="toggleMode()">🌗 Mode</button>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Hi, I'm <span>Vipin</span></h1>
-    <h2 id="typing"></h2>
-    <button>Hire Me</button>
-  </div>
-</section>
+<div class="hero">
+  <h1>Hi, I'm Vipin Bhardwaj 👋</h1>
+  <h2><span id="typing"></span></h2>
+  <button onclick="scrollToSection()">Explore ↓</button>
+</div>
 
 <!-- ABOUT -->
-<section id="about" class="glass">
-  <h2>About Me</h2>
-  <p>I build modern websites and AI projects.</p>
+<section id="about" data-aos="fade-up">
+  <h2 class="big">About Me</h2>
+  <p>
+    I am a passionate developer skilled in HTML, CSS, Java, Python, and DSA.
+    I love building modern web applications and solving real-world problems.
+    Currently exploring Machine Learning and Software Development.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section data-aos="fade-up">
+  <h2 class="big">Skills</h2>
+  <img src="https://skillicons.dev/icons?i=html,css,js,java,python,c">
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+<section data-aos="fade-up">
+  <h2 class="big">Projects</h2>
 
   <div class="grid">
-    <div class="card">CNN Project</div>
-    <div class="card">Portfolio</div>
-    <div class="card">More Coming...</div>
+
+    <div class="card">
+      <h3>CNN Image Classification</h3>
+      <p>Deep learning model for image recognition.</p>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Modern animated portfolio using HTML, CSS & JS.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="glass">
-  <h2>Contact</h2>
-  <input placeholder="Email">
-  <button>Send</button>
+<!-- GITHUB STATS -->
+<section data-aos="fade-up">
+  <h2 class="big">GitHub Stats</h2>
+
+  <img src="https://github-readme-stats.vercel.app/api?username=VipinBhardwaj-07&show_icons=true&theme=radical">
+  <br><br>
+  <img src="https://streak-stats.demolab.com/?user=VipinBhardwaj-07&theme=radical">
 </section>
 
-<script src="script.js"></script>
+<!-- CONTACT -->
+<section data-aos="fade-up">
+  <h2 class="big">Contact Me</h2>
+  <p>Email: vipinbhardwaj0827@gmail.com</p>
+  <a href="https://linkedin.com" target="_blank">
+    <button>LinkedIn</button>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  Made with ❤️ by Vipin
+</footer>
+
+<!-- SCRIPTS -->
+
+<!-- Typing Effect -->
+<script>
+const texts = ["Web Developer", "DSA Enthusiast", "Tech Learner"];
+let i = 0, j = 0, current = "", isDeleting = false;
+
+function type() {
+  if (i < texts.length) {
+    if (!isDeleting && j <= texts[i].length) {
+      current = texts[i].substring(0, j++);
+    } else if (isDeleting && j >= 0) {
+      current = texts[i].substring(0, j--);
+    }
+
+    document.getElementById("typing").innerHTML = current;
+
+    if (j == texts[i].length) isDeleting = true;
+    if (j == 0 && isDeleting) {
+      isDeleting = false;
+      i = (i + 1) % texts.length;
+    }
+  }
+  setTimeout(type, 100);
+}
+type();
+
+/* DARK MODE */
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
+
+/* SCROLL */
+function scrollToSection() {
+  document.getElementById("about").scrollIntoView({behavior: "smooth"});
+}
+
+/* CURSOR */
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", e => {
+  cursor.style.top = e.clientY + "px";
+  cursor.style.left = e.clientX + "px";
+});
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
 </html>
