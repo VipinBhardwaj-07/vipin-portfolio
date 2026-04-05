@@ -1,92 +1,74 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:white;
-  transition:0.5s;
-}
-
-body.light{
-  background:#f5f5f5;
-  color:#111;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
 }
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 50px;
-  font-weight:bold;
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
 }
 
-.hero{
-  text-align:center;
-  margin-top:80px;
+.hero{text-align:center;margin-top:60px;}
+.profile-img{
+width:150px;border-radius:50%;
+box-shadow:0 0 20px #38bdf8;
 }
 
-.hero h1{
-  font-size:3rem;
-  font-weight:800;
+.hero h1{font-size:3rem;font-weight:800;}
+.hero h2{color:#38bdf8;}
+
+.intro{
+max-width:700px;
+margin:auto;
+margin-top:20px;
+font-size:1.1rem;
 }
 
-.hero h2{
-  font-size:1.5rem;
-  color:#38bdf8;
-}
-
-button{
-  padding:12px 20px;
-  border:none;
-  background:#38bdf8;
-  color:black;
-  border-radius:10px;
-  cursor:pointer;
-  margin-top:10px;
-  font-weight:bold;
-}
-
-section{
-  padding:60px 100px;
-}
+section{padding:60px 100px;}
 
 .big{
-  font-size:2rem;
-  font-weight:800;
-  margin-bottom:20px;
+font-size:2rem;
+font-weight:800;
+margin-bottom:20px;
 }
 
 .grid{
-  display:flex;
-  flex-wrap:wrap;
+display:flex;
+flex-wrap:wrap;
 }
 
 .card{
-  background:rgba(255,255,255,0.1);
-  backdrop-filter:blur(10px);
-  padding:20px;
-  margin:20px;
-  border-radius:15px;
-  transition:0.3s;
+background:rgba(255,255,255,0.1);
+padding:20px;
+margin:20px;
+border-radius:15px;
+text-align:center;
+transition:0.4s;
 }
 
-.card:hover{
-  transform:scale(1.05);
+.tilt:hover{
+transform:rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+button{
+padding:10px 20px;
+border:none;
+background:#38bdf8;
+border-radius:10px;
+margin-top:10px;
+cursor:pointer;
+font-weight:bold;
 }
 
 input,textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:10px;
-  border:none;
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:10px;
+border:none;
 }
 
-footer{
-  text-align:center;
-  padding:20px;
-  opacity:0.7;
-}
+footer{text-align:center;padding:20px;}
