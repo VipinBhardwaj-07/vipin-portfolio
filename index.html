@@ -3,243 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vipin Bhardwaj Portfolio</title>
+<title>Vipin Bhardwaj | Portfolio</title>
 
-<!-- AOS Animation -->
+<link rel="stylesheet" href="style.css">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  transition: 0.5s;
-}
-
-/* LIGHT MODE */
-body.light {
-  background: #f5f5f5;
-  color: #111;
-}
-
-/* CURSOR GLOW */
-.cursor {
-  width: 20px;
-  height: 20px;
-  background: #00f7ff;
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  mix-blend-mode: difference;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  font-weight: bold;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  margin-top: 80px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.hero h2 {
-  font-size: 1.5rem;
-  color: #38bdf8;
-}
-
-/* BUTTON */
-button {
-  padding: 10px 20px;
-  border: none;
-  background: #38bdf8;
-  color: black;
-  border-radius: 10px;
-  margin-top: 15px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* SECTION */
-section {
-  padding: 60px 80px;
-}
-
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  margin: 20px;
-  border-radius: 15px;
-  transition: 0.3s;
-  transform-style: preserve-3d;
-}
-
-.card:hover {
-  transform: rotateY(10deg) scale(1.05);
-}
-
-/* GRID */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* TEXT BIG */
-.big {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.7;
-}
-</style>
 </head>
 
 <body>
 
-<div class="cursor"></div>
-
-<!-- NAV -->
 <nav>
-  <div>Vipin 🚀</div>
-  <button onclick="toggleMode()">🌗 Mode</button>
+  <div class="logo">Vipin 🚀</div>
+  <button onclick="toggleMode()">🌗</button>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Hi, I'm Vipin Bhardwaj 👋</h1>
+  <img src="profile.jpg.jpeg" class="profile-img">
+  <h1>Vipin Bhardwaj</h1>
   <h2><span id="typing"></span></h2>
-  <button onclick="scrollToSection()">Explore ↓</button>
+
+  <p class="intro">
+    I am a passionate Computer Science student with strong interest in Web Development,
+    Data Structures and Artificial Intelligence. I build modern, interactive and 
+    user-friendly applications that solve real-world problems.
+  </p>
+
+  <a href="Vipin_Resume.pdf" download>
+    <button>📄 Download Resume</button>
+  </a>
 </div>
 
 <!-- ABOUT -->
-<section id="about" data-aos="fade-up">
-  <h2 class="big">About Me</h2>
-  <p>
-    I am a passionate developer skilled in HTML, CSS, Java, Python, and DSA.
-    I love building modern web applications and solving real-world problems.
-    Currently exploring Machine Learning and Software Development.
-  </p>
+<section data-aos="fade-up">
+<h2 class="big">About Me</h2>
+<p>
+Hello! I am Vipin Bhardwaj, a highly motivated developer who loves building modern web applications.
+I have strong knowledge of Java, Python, C and Data Structures. I focus on writing clean, efficient 
+and scalable code. I enjoy solving coding problems and learning new technologies like AI, ML and Cloud.
+</p>
 </section>
 
 <!-- SKILLS -->
 <section data-aos="fade-up">
-  <h2 class="big">Skills</h2>
-  <img src="https://skillicons.dev/icons?i=html,css,js,java,python,c">
+<h2 class="big">Skills</h2>
+<p class="text">
+I am skilled in HTML, CSS, JavaScript along with Java, Python and C. I also have strong understanding 
+of DSA and problem solving. I am continuously improving my skills by exploring AI and modern technologies.
+</p>
+<img src="https://skillicons.dev/icons?i=html,css,js,java,python,c">
 </section>
 
 <!-- PROJECTS -->
 <section data-aos="fade-up">
-  <h2 class="big">Projects</h2>
+<h2 class="big">Projects</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>CNN Image Classification</h3>
-      <p>Deep learning model for image recognition.</p>
-    </div>
+<div class="card tilt">
+<h3>CNN Image Classification</h3>
+<p>
+Deep learning project using CNN for image recognition. It detects patterns and classifies images.
+</p>
+<button>Live</button>
+<button>Code</button>
+</div>
 
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Modern animated portfolio using HTML, CSS & JS.</p>
-    </div>
+<div class="card tilt">
+<h3>Portfolio Website</h3>
+<p>
+Modern animated portfolio with 3D effects, GitHub API and responsive design.
+</p>
+<button>Live</button>
+<button>Code</button>
+</div>
 
-  </div>
+</div>
 </section>
 
-<!-- GITHUB STATS -->
+<!-- CERTIFICATES -->
 <section data-aos="fade-up">
-  <h2 class="big">GitHub Stats</h2>
+<h2 class="big">Certificates</h2>
 
-  <img src="https://github-readme-stats.vercel.app/api?username=VipinBhardwaj-07&show_icons=true&theme=radical">
-  <br><br>
-  <img src="https://streak-stats.demolab.com/?user=VipinBhardwaj-07&theme=radical">
+<div class="grid">
+
+<div class="card tilt"><h3>DSA SkillUp</h3><a href="dsa-skillup.pdf" target="_blank"><button>View</button></a></div>
+<div class="card tilt"><h3>GUVI Python</h3><a href="guvi-python.pdf" target="_blank"><button>View</button></a></div>
+<div class="card tilt"><h3>Infosys Cloud</h3><a href="infosys-cloud-computing.pdf" target="_blank"><button>View</button></a></div>
+<div class="card tilt"><h3>NASSCOM</h3><a href="nasscom-pbel.pdf" target="_blank"><button>View</button></a></div>
+<div class="card tilt"><h3>Gen AI</h3><a href="sjf-genai.pdf" target="_blank"><button>View</button></a></div>
+<div class="card tilt"><h3>TCS iON AI</h3><a href="tcsion-yuva-ai.pdf" target="_blank"><button>View</button></a></div>
+
+</div>
+</section>
+
+<!-- GITHUB -->
+<section data-aos="fade-up">
+<h2 class="big">GitHub Stats</h2>
+<p>My GitHub profile shows my coding consistency and growth.</p>
+
+<img src="https://github-readme-stats.vercel.app/api?username=VipinBhardwaj-07&show_icons=true&theme=radical">
+<br><br>
+<img src="https://streak-stats.demolab.com/?user=VipinBhardwaj-07&theme=radical">
 </section>
 
 <!-- CONTACT -->
 <section data-aos="fade-up">
-  <h2 class="big">Contact Me</h2>
-  <p>Email: vipinbhardwaj0827@gmail.com</p>
-  <a href="https://linkedin.com" target="_blank">
-    <button>LinkedIn</button>
-  </a>
+<h2 class="big">Contact Me</h2>
+
+<p>
+I am open to opportunities and collaborations. Feel free to connect with me.
+</p>
+
+<p><b>Email:</b> vipinbhardwaj0827@gmail.com</p>
+
+<a href="https://www.linkedin.com/in/vipin-bhardwaj-55a5a93a9" target="_blank">
+<button>🔗 LinkedIn</button>
+</a>
+
+<form onsubmit="sendMsg(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-  Made with ❤️ by Vipin
+Made with ❤️ by Vipin Bhardwaj
 </footer>
 
-<!-- SCRIPTS -->
-
-<!-- Typing Effect -->
-<script>
-const texts = ["Web Developer", "DSA Enthusiast", "Tech Learner"];
-let i = 0, j = 0, current = "", isDeleting = false;
-
-function type() {
-  if (i < texts.length) {
-    if (!isDeleting && j <= texts[i].length) {
-      current = texts[i].substring(0, j++);
-    } else if (isDeleting && j >= 0) {
-      current = texts[i].substring(0, j--);
-    }
-
-    document.getElementById("typing").innerHTML = current;
-
-    if (j == texts[i].length) isDeleting = true;
-    if (j == 0 && isDeleting) {
-      isDeleting = false;
-      i = (i + 1) % texts.length;
-    }
-  }
-  setTimeout(type, 100);
-}
-type();
-
-/* DARK MODE */
-function toggleMode() {
-  document.body.classList.toggle("light");
-}
-
-/* SCROLL */
-function scrollToSection() {
-  document.getElementById("about").scrollIntoView({behavior: "smooth"});
-}
-
-/* CURSOR */
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e => {
-  cursor.style.top = e.clientY + "px";
-  cursor.style.left = e.clientX + "px";
-});
-</script>
-
-<!-- AOS -->
+<script src="script.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init();</script>
 
